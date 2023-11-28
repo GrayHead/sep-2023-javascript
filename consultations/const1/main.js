@@ -77,3 +77,4 @@ let user = {
         }
     }}
 console.log(user.address.geo.lat)
+
