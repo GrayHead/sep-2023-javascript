@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title 04.12.2023</title>
+</head>
+<body>
+
+
+<script>
+
+    // let foo = function () {
+    //     console.log('asdassdadsasd');
+    // }
+    //
+    // foo();
+    //
+    //
+    //
+    // foobar();
+    //
+    // function foobar() {
+    //     console.log('do somth');
+    // }
+
+
+    // let calc = (a, b) => console.log(a + b);
+    // let result = calc(10, 20);
+    // console.log(result);
+
+
+    // function a(arg1) {
+    // }
+    //
+    // a(() => console.log('hello'));
+
+    // let foo = (...rest) => console.log(rest);
+    //
+    // foo(11, 22, 33);
+
+    // fn declaration + fn expression - arguments +
+    // arraow fn - arguments -
+
+
+    // let newFn1 = function () {
+    //     console.log('fn1');
+    // };
+    //
+    // function newFn2() {
+    //     console.log('fn2');
+    // };
+    //
+    //
+    // let fnArr = [
+    //     newFn1,
+    //     newFn2,
+    //     function () {
+    //     },
+    //     () => console.log('xxx')
+    // ];
+    //
+    // fnArr[0]();
+    //
+    // fnArr[3]();
+
+
+    // let xxx = {
+    //     imya: 'kokos',
+    //     age: 123,
+    //     greeting: function () {
+    //         console.log('hello my name is -' + this.imya);
+    //         console.log(this);
+    //     },
+    // }
+    //
+    // xxx.greeting();
+
+
+    // let yyy = {
+    //     name: 'abrikos',
+    //     age: 12,
+    //     greeting: () => {
+    //         console.log('hello my name is -' + name);
+    //         console.log(this);
+    //     },
+    // }
+    //
+    // yyy.greeting();
+
+    // console.log(this);
+
+
+    let user = {
+        name: 'kavun',
+        age: 14,
+        greeting() {
+            console.log('hello my name is -' + this.name);
+            console.log(this);
+        },
+        wife: {
+            name: 'asdasdas',
+            greeting: function () {
+                console.log('helli ' + this.name);
+                user.greeting();
+            },
+        }
+    }
+    user.greeting();
+
+    user.wife.greeting();
+
+
+    let loop = (arr) => {
+        for (const arrElement of arr) {
+            console.log(arrElement);
+        }
+    }
+
+    loop([11, 22, 33]);
+
+</script>
+</body>
+</html>
+
+  
