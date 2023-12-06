@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title 06.12.2023</title>
+</head>
+<body>
+
+
+<script>
+    //         0123456789
+    let str = 'okten shmokten !!! ???';
+    // let s2 = new String('asdhgsajdhgf');
+    // console.log(str[2]);
+    // console.log(str + '!!!');
+
+    //  let concat = str.concat('???', '!!!!');
+    // console.log(str);
+    // console.log(concat);
+    // let xxx = str.toUpperCase();
+    // console.log(xxx);
+    // console.log(xxx.toLowerCase());
+
+    // console.log(str.startsWith('okten ', 1));
+    // let substring = str.substring(0, 8);
+    // console.log(substring);
+    // let indexOfO = str.indexOf('o');// 0
+    // let lastIndexOfO = str.lastIndexOf('o'); // 9
+    //
+    // console.log(str.substring(indexOfO, lastIndexOfO));
+    //
+    // for (const char of str) {
+    //     console.log(char);
+    // }
+
+    // let str2 = ' okten shmokten ';
+    // let trim = str2.trim();
+    // console.log(trim);
+    // console.log(trim[0]);
+    // console.log(trim[trim.length - 1]);
+    // console.log(str.replaceAll('ten', '***'));
+
+    let phone = '+38 (067) 338-12-12'; // 0673381212
+
+
+    // console.log(phone
+    //     .replaceAll(' ', '')
+    //     .replaceAll('-', '')
+    //     .replaceAll('(', '')
+    //     .replaceAll(')', '')
+    //     .replaceAll('+38', ''));
+
+    // console.log(str.includes('ten'));
+
+    // okten shmokten !!! ???
+    // ['okten','shmokten','!!!' , '???']
+    // let split = str.split('n');
+    // console.log(split);
+
+
+    // let arr = [11];
+    // arr[1] = 22;
+    // console.log(Array.isArray(arr));
+    // console.log(arr.length);
+    // console.log(arr);
+    // let newSize = arr.push('asda', true, {});
+    // console.log(arr);
+    // console.log(newSize);
+
+    // let deletedOne = arr.pop();
+    // console.log(arr);
+    // console.log(deletedOne);
+    // let deletedArr = [];
+    // deletedArr.push(deletedOne);
+    //
+    // console.log(arr);
+    // console.log(deletedArr);
+
+    // let xxx = [];
+    // for (let i = 0; i < arr.length; i++) {
+    //     xxx.push(arr.pop());
+    // }
+    //
+    // console.log(arr);
+    // console.log(xxx);
+
+    // arr.unshift('!!!');
+    // console.log(arr);
+    // console.log(arr.shift());
+    // console.log(arr);
+
+    // let concat = arr.concat(['asda', 'qweqew', 'adsasdasda']);
+    // console.log(arr);
+    // console.log(concat);
+
+    // let s = '';
+    // for (const element of arr) {
+    //     s = s + element + '-';
+    // }
+    //
+    // console.log(s);
+
+
+    // let join = arr.join('-');
+    // console.log(join);
+    //
+    // console.log(arr.reverse());
+    //
+
+    // let slice = arr.slice(1, 4);
+    // console.log(slice);
+    // console.log(arr);
+
+    //[11, 22, 'asda', true, {…}]
+    // let splice = arr.splice(0, 0,'asd','qwe');
+    // console.log(arr);
+    // console.log(splice);
+
+    // console.log(arr.indexOf(true));
+    //
+    // console.log(arr.includes(22));
+
+
+    // let numbers = [11, 22, 33, 44, 55, 66, 77];
+    //
+    // // let callbackfn = (item) => console.log(item);
+    // // numbers.forEach(callbackfn);
+    //
+    // // let filteredArray =
+    // //     numbers
+    // //         .filter((item) => item % 2 === 0);
+    // //
+    // // console.log(filteredArray);
+    // // console.log(numbers);
+    //
+    //
+    // let newNUmbers = numbers.map((item) => item + 10);
+    // console.log(numbers);
+    // console.log(newNUmbers);
+    // console.log(numbers === newNUmbers);
+
+
+    let users = [
+        {name: 'vasya', age: 31, status: false}, //0
+        {name: 'petya', age: 30, status: true}, // 1
+        {name: 'kolya', age: 29, status: true},// 2
+        {name: 'olya', age: 28, status: false}, // 3
+        {name: 'max', age: 30, status: true},
+        {name: 'anya', age: 31, status: false},
+        {name: 'oleg', age: 28, status: false},
+        {name: 'andrey', age: 29, status: true},
+        {name: 'masha', age: 30, status: true},
+        {name: 'olya', age: 31, status: false},
+        {name: 'max', age: 31, status: true}
+    ];
+
+    // [[...],[...]]
+
+    // let newUsersArray = users.map((user, index, array) => {
+    //     user.id = index + 1;
+    //     return user;
+    // });
+    //
+    // console.log(newUsersArray);
+    // // console.log(newUsersArray === users);
+    // console.log(users);
+
+
+    // let sort =
+    //     users
+    //         .sort((user1, user2) => user1.age - user2.age);
+    // console.log(sort);
+    //
+    //
+    // let sort1 = users.sort((a, b) => {
+    //     return b.name.localeCompare(a.name);
+    // });
+    //
+    // console.log(sort1);
+
+
+    let reduce = users.reduce((accumulator, user) => {
+        if (user.status) {
+            accumulator[0].push(user);
+        } else {
+            accumulator[1].push(user);
+        }
+        return accumulator;
+    }, [[], []]);
+    console.log(reduce);
+
+
+</script>
+</body>
+</html>
+
+  
