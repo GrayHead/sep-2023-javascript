@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    //.......
+    ///..........
+</head>
+<body>
+
+<script>
+
+    // console.log('start');
+    // let obj = {
+    //     id: 1,
+    //     // foo: {
+    //     //     hash: '#451781tiwpslflsdfh',
+    //     //
+    //     // }
+    //
+    // } // excel data
+    // try {
+    //     console.log(obj.foo.hash);
+    // } catch (e) {
+    //     console.log(e);
+    // } finally {
+    //     console.log('done');
+    // }
+    //
+    // console.log('end');
+
+    // function divide(a, b) {
+    //     if (b === 0) {
+    //         throw new Error('you cannot divide by 0!');
+    //     }
+    //     return a / b;
+    // }
+    //
+    //
+    // try {
+    //     divide(10, 0);
+    // } catch (e) {
+    //     console.log(e);
+    // }
+
+
+    // function iterator(users) {
+    //     for (const user of users) {
+    //
+    //         try {
+    //             console.log(user.wife.name);
+    //         } catch (e) {
+    //             console.log(`ти використовуєщ не відповідний формат об\'єкуту в тебе не вистачає поля `);
+    //         }
+    //
+    //
+    //     }
+    //
+    // }
+    //
+    //
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ]
+    //
+    // iterator(users);
+
+
+    // let obj = {
+    //     id: '#76347ksdf',
+    //     name: 'kokos',
+    // }
+    //
+    // // if (obj.wife) {
+    // //     console.log(obj.wife.name);
+    // // }
+    // // Optional Chain Operator
+    // console.log(obj.wife?.name?.lastname);
+
+
+    // let name = 'kokos';
+    // let age = 31;
+    //
+    //
+    // let user = {
+    //     name, // name : name
+    //     age // age : age
+    // }
+    // console.log(user);
+    //
+    // let user2 = {
+    //     name,
+    //     age,
+    //
+    // }
+    //
+    // console.log(user2);
+
+    // function userFabric(id, name, age, greeting) {
+    //     return {
+    //         id,
+    //         name,
+    //         age,
+    //         greeting,
+    //         foo() {
+    //             console.log('foobar function');
+    //         }
+    //     };
+    // }
+    //
+    // let user1 = userFabric(1, 'kokos', 31, () => {
+    //     console.log('hello');
+    // });
+    // console.log(user1);
+    // user1.greeting();
+    // user1.foo();
+
+
+    // function extractor({name: lastname, id}) {
+    //     // let {id, name} = obj;
+    //
+    //     console.log(id, lastname);
+    // }
+    //
+    // extractor({id: 1, name: 'kokos', age: 31});
+    // extractor({id: 2, name: 'abrikos', age: 31, status: true});
+
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // let [user1, user2, user3, , user4] = users;
+
+    //
+    // let user = {
+    //     id: 1,
+    //     name: 'vasya',
+    //     age: 31
+    // }
+    //
+    // let user2 = {...user, status: false, id: 2};
+    //
+    // console.log(user === user2);
+    // console.log(user2);
+    //
+    // let arr = [...users];
+    // console.log(arr);
+    // console.log(arr === users);
+
+
+    // let user = {
+    //     id: 1,
+    //     name: 'vasya',
+    //     age: 31,
+    //     wife: {name: 'anna'}
+    //
+    // }
+    //
+    // let uCopy = {...user};
+    // console.log(uCopy);
+    // console.log(uCopy === user);
+    // console.log(uCopy.wife === user.wife);
+
+    // let users = [
+    //     {name: 'vasya', age: 31, status: false},
+    //     {name: 'petya', age: 30, status: true},
+    //     {name: 'kolya', age: 29, status: true},
+    //     {name: 'olya', age: 28, status: false},
+    //     {name: 'max', age: 30, status: true},
+    //     {name: 'anya', age: 31, status: false},
+    //     {name: 'oleg', age: 28, status: false},
+    //     {name: 'andrey', age: 29, status: true},
+    //     {name: 'masha', age: 30, status: true},
+    //     {name: 'olya', age: 31, status: false},
+    //     {name: 'max', age: 31, status: true}
+    // ];
+    //
+    // // let map = users.map((user, index) => {
+    // //
+    // //     return {...user, id: index + 1};
+    // // });
+    // // let mappedUsers = users.map((user, index) => {
+    // //     let stringify = JSON.stringify(user);
+    // //     let userObj = JSON.parse(stringify);
+    // //     userObj.id = index + 1;
+    // //     return userObj;
+    // // });
+    // //
+    // //
+    // // users.map(({name, age}, index) => name, age);
+    // //
+    // //
+    // // console.log(mappedUsers);
+    // // console.log(mappedUsers === users);
+    // // console.log(users);
+    // //
+    // //
+    // // let value = {id: 100500};
+    // // console.log(value);
+    // // let s = JSON.stringify(value);
+    // // console.log(s);
+    // //
+    // // let naturalObj = JSON.parse(s);
+    // // console.log(naturalObj);
+    // //
+    // // console.log(naturalObj === value);
+    //
+    //
+    // let obj = {
+    //     id: 100500,
+    //     emb: {hash: '5176712ryrt'},
+    //     foo: function () {
+    //
+    //     },
+    // };
+    // let clone = structuredClone(obj);
+    // console.log(clone);
+    // console.log(clone === obj);
+    // console.log(clone.emb === obj.emb);
+    //
+    //
+    // let obj = '{"id": 100500, "emb": {"hash": "5176712ryrt"}}';
+
+
+    // let coursesAndDurationArray = [
+    //     {title: 'JavaScript Complex', monthDuration: 5},
+    //     {title: 'Java Complex', monthDuration: 6},
+    //     {title: 'Python Complex', monthDuration: 6},
+    //     {title: 'QA Complex', monthDuration: 4},
+    //     {title: 'FullStack', monthDuration: 7},
+    //     {title: 'Frontend', monthDuration: 4}
+    // ];
+
+
+    let checks = [110, 220, 133, 244, 155, 266];
+    // [[<200],[>200]]
+
+
+    // let result = 0;
+    // for (const check of checks) {
+    //     result += check;
+    // }
+    //
+    // console.log(result);
+
+    // let reduce = checks.reduce((result, check) => {
+    //     result = result + check;
+    //     return result;
+    // }, 0);
+    // console.log(reduce);
+
+    // let reduce = checks.reduce((result, check) => {
+    //     if (check < 200) {
+    //         result[0].push(check);
+    //     }
+    //     if (check > 200) {
+    //         result[1].push(check);
+    //     }
+    //     return result;
+    // }, []);
+    //
+    // console.log(reduce);
+
+    // {a:[<200], b: [>200]}
+
+    // let reduce = checks.reduce((result, check) => {
+    //
+    //     if (check < 200) {
+    //         result.a.push(check);
+    //     }
+    //
+    //     if (check > 200) {
+    //         result.b.push(check);
+    //     }
+    //
+    //     return result;
+    //
+    //
+    // }, {a: [], b: []});
+
+
+    let reduce = checks.reduce((result, check) => {
+
+        if (check < 200) {
+            if (result.a && Array.isArray(result.a)) {
+                result.a.push(check);
+            } else {
+                result.a = [];
+                result.a.push(check);
+            }
+        }
+
+        if (check > 200) {
+            if (result.b && Array.isArray(result.b)) {
+                result.b.push(check);
+            } else {
+                result.b = [];
+                result.b.push(check);
+            }
+        }
+
+        return result;
+
+
+    }, {});
+
+
+    console.log(reduce);
+
+</script>
+
+</body>
+</html>
