@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title 13.12.2023</title>
+</head>
+<body>
+
+
+<script>
+    // function User(id, name, age) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.id = id;
+    // }
+    //
+    // let user = new User(1, 'asd', 123);
+    // let user2 = new User(2, 'asdadsqweqwe', 1232435435);
+
+
+    // function User(id, name, age, wife) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.id = id;
+    //     this.wife = wife;
+    // }
+    //
+    // let u = new User(1, 'ASDASD', 123123, {name: 'anna'});
+    //
+    // console.log(u);
+
+    // function User(id, name, age, wifeName, wifeAge) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.id = id;
+    //     this.wife = {wifeName, wifeAge};
+    // }
+    //
+    // let user = new User(1, 'vasya', 31, 'anna', 22);
+    // console.log(user);
+
+    // let u1 = {
+    //     name: 'vasya',
+    //     greeting(msg, speak) {
+    //         console.log(`${msg} ${speak} ${this.name}`);
+    //
+    //     }
+    // }
+    //
+    // u1.greeting('olla', 'my name is');
+    //
+    // let u2 = {name: 'kokos'}
+    // //
+    // // u1.greeting.call(u2, 'hi', 'me gusto tu');
+    // //
+    // // u1.greeting.apply(u2, ['hi', 'me gusto tu']);
+    //
+    // let greetingCopy = u1.greeting.bind(u2);
+    // greetingCopy('asjdgsaj', 'twuyuyew');
+
+    // let o = {};
+    // console.log(o);
+    // console.log(o.__proto__);
+
+    // let user = {
+    //     id: 131,
+    //     name: 'qrqgsafdgfsa',
+    //
+    // }
+    // let newUser = Object.create(user);
+    //
+    // console.log(user.id);
+    // console.log(user.name);
+    //
+    //
+    //
+    // console.log(newUser.id);
+    // console.log(newUser.name);
+    //
+    // console.log(newUser);
+    //
+    // newUser.name = 'kokos';
+    //
+    // console.log(newUser);
+    // console.log(newUser.name);
+
+
+    class User {
+
+        constructor(id, name, age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+
+        greeting() {
+            console.log(`hello my namre is ${this.name}`);
+        };
+
+        foobar() {
+            return 'foobar';
+        }
+
+    }
+
+    // let user = new User(1, 'kokos', 13);
+    // console.log(user);
+    // user.greeting();
+    // console.log(user.foobar());
+    //
+    // console.log(user);
+
+
+    // class Client extends User {
+    //     constructor(id, name, age, login, password) {
+    //         super(id, name, age);
+    //         this.login = login;
+    //         this.password = password;
+    //     }
+    // }
+    //
+    // let client = new Client(1, 'kokos', 123, 'logkokos', '1234');
+    // console.log(client)
+    // console.log(client.foobar());
+
+
+    let date = new Date();
+    console.log(date.getDay());
+    console.log(date.getDate());
+    console.log(date.getHours());
+    console.log(date.getMinutes());
+    console.log(date.getSeconds());
+    console.log(date.getMilliseconds());
+    console.log(date.getTime());
+    console.log(date.getMonth());
+
+
+</script>
+</body>
+</html>
+
+  
