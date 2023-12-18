@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title 18.12.2023</title>
+    <style>
+
+        /**{*/
+        /*    background: #000 !important;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <h1>before</h1>
+    <div id="target" xxx="???" class="point">
+        <!--    augdag-->
+        !!!<b>Lorem ipsum dolor </b>sit amet, consectetur adipisicing elit. Ad, amet architecto ducimus eius eligendi
+        impedit
+        maxime
+        <span>minima nulla</span>, pariatur perspiciatis porro quasi quo recusandae repellat repellendus saepe soluta
+        vero
+        voluptates.
+
+    </div>
+    <div xxx="???" class="point">
+        <!--    augdag-->
+        <b>Lorem ipsum dolor </b>sit amet, consectetur adipisicing elit. Ad, amet architecto ducimus eius eligendi
+        impedit
+        maxime
+        <span>minima nulla</span>, pariatur perspiciatis porro quasi quo recusandae repellat repellendus saepe soluta
+        vero
+        voluptates.
+
+    </div>
+    <div xxx="???" class="point">
+        <!--    augdag-->
+        <b>Lorem ipsum dolor </b>sit amet, consectetur adipisicing elit. Ad, amet architecto ducimus eius eligendi
+        impedit
+        maxime
+        <span>minima nulla</span>, pariatur perspiciatis porro quasi quo recusandae repellat repellendus saepe soluta
+        vero
+        voluptates.
+
+    </div>
+    <h2>after</h2>
+
+
+</div>
+
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+
+
+<script>
+    // let onbj = {
+    //     key1: 'vaslue'
+    // }
+    //
+    // function ObjCreator(value1) {
+    //     this.key1 = value1
+    // }
+    //
+    //
+    // let objCreator = new ObjCreator('adjagsdhgads');
+    // console.log(objCreator); // 1 docu // 2 chceck
+
+    // console.log(window.document);
+    // console.log(window.document.head);
+    //
+    // console.log(document.title);
+    // document.title = 'hello okten';
+    //
+    // console.log(document.scripts[0]);
+    // console.log(document.head.title);
+
+
+    let wrapList = document.getElementsByClassName('wrap');
+    console.log(wrapList);
+    let wrap = wrapList[0];
+    console.log(wrap);
+
+    let points = wrap.getElementsByClassName('point');
+
+    console.log(points);
+
+    let target = document.getElementById('target');
+    console.log(target);
+
+    let divList = document.getElementsByTagName('div'); // 6
+    console.log(divList);
+
+    console.log(wrap.getElementsByTagName('div'));
+
+    // wrap.innerText = 'askdgashg';
+
+    let children = wrap.children;
+    console.log(children);
+
+    for (const htmlItem of children) {
+        htmlItem.innerText = 'xxx';
+        htmlItem.style.background = 'silver';
+        htmlItem.style.color = 'blue';
+        htmlItem.style.color = 'red';
+    }
+
+    // add .....4 div
+    console.log(divList); // 10
+
+    let pointLIst = document.querySelectorAll('.point');
+    console.log(pointLIst); // 3
+    //add 10 .point
+
+    let div = document.createElement('div');
+    div.classList.add('point');
+    div.innerText = 'ashdgajsgdajkhdjahgdsjhsagdhafdshgafdshgafsdhgafsdhgf';
+    document.body.appendChild(div);
+
+    console.log(pointLIst) // 3
+
+
+</script>
+</body>
+</html>
+
+  
