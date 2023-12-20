@@ -9,13 +9,23 @@
 </head>
 <body>
 
-<button onclick="(function (){
-    localStorage.clear();
-}())">clear favorites
-</button>
+<!--<button onclick="(function (){-->
+<!--    localStorage.clear();-->
+<!--}())">clear favorites-->
+<!--</button>-->
 
+
+<button
+        onclick="(function () {
+        localStorage.clear();
+    }())"
+
+>clear storage
+</button>
 <script>
 
+
+    ;
 
     const products = JSON.parse(localStorage.getItem('favs'));
     for (const product of products) {
