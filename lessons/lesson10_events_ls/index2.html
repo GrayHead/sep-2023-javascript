@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+
+    </title>
+
+</head>
+<body>
+
+<form name="f1">
+    <input type="text" placeholder="username" name="username"> <!--// username=tasyl-->
+    <input type="number" placeholder="user age" name="age"><!-- // age=123-->
+    <input type="submit" value="typ btn save">
+    <!--    <button>save</button>-->
+</form>
+
+
+<script>
+
+    let form = document.forms.f1;
+
+    let usersStorage = localStorage.getItem('users');
+    let users = JSON.parse(usersStorage) || [];
+
+
+    form.onsubmit = function (ev) {
+        ev.preventDefault();
+        let username = ev.target.username.value;
+        let age = this.age.value;
+        let data = {username, age};
+        users.push(data);
+        localStorage.setItem('users', JSON.stringify(users));
+
+    };
+
+
+</script>
+</body>
+</html>

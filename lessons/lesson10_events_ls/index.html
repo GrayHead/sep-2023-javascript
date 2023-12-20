@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+
+    </title>
+
+    <style>
+        .preloader {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(117, 117, 117, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+<form name="f1">
+    <input type="text" placeholder="username" name="username"> <!--// username=tasyl-->
+    <input type="number" placeholder="user age" name="age"><!-- // age=123-->
+    <input type="submit" value="typ btn save">
+    <!--    <button>save</button>-->
+</form>
+
+
+<button id="btn-show-all">show all users</button>
+<script>
+
+    console.log(document.forms);
+    let form = document.forms[0];
+    console.log(form);
+    // console.log(document.forms.f1);
+    // console.log(document.forms['f1']);
+
+
+    let users = [];
+
+
+    form.onsubmit = function (ev) {
+        console.log(ev);
+        ev.preventDefault();
+        let username = ev.target.username.value;
+        let age = this.age.value;
+        console.log({username, age});
+        users.push({username, age});
+    };
+
+
+    let btnshow = document.getElementById('btn-show-all');
+    btnshow.addEventListener('click', function (e) {
+        for (const user of users) {
+            let div = document.createElement('div');
+            div.innerText = `user: name - ${user.username}, age - ${user.age}`;
+            document.body.append(div);
+        }
+    });
+
+    btnshow.addEventListener('click', function (e) {
+        console.log('jasasjdgh');
+    });
+
+    btnshow.addEventListener('click', function (e) {
+        console.log('uywiueyriryiwry');
+    });
+
+    let preloader = document.createElement('div');
+
+    document.body.append(preloader);
+
+    document.onreadystatechange = function (ev) {
+        console.log(document.readyState);
+        if (document.readyState === 'interactive') {
+            preloader.classList.toggle('preloader');
+        }
+        if (document.readyState === 'complete') {
+            preloader.classList.toggle('preloader');
+        }
+    }
+
+    window.onload = function () {
+        console.log('load');
+    };
+
+</script>
+</body>
+</html>
