@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite</title>
+    <style>
+        img{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+<a href="index.html">GO TO HOME PAGE</a>
+<h2>THIS PAGE FAVORITE ITEM</h2>
+
+
+<script>
+
+    let favorite = JSON.parse(localStorage.getItem('fav'))
+
+    for (const item of favorite) {
+        let carsDiv = document.createElement('div');
+        document.body.appendChild(carsDiv)
+        carsDiv.innerHTML = ` <p>${item.make} - ${item.year}</p>
+ <img src="${item.image}" alt="${item.make}">
+                `
+    }
+
+    let clear = document.createElement('button')
+    clear.innerHTML =  `CLEAR`
+    document.body.appendChild(clear)
+    clear.onclick = function () {
+        localStorage.clear();
+        location.reload();
+    }
+
+</script>
+</body>
+</html>
