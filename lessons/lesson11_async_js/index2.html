@@ -12,21 +12,40 @@
 
 <script>
 
-    // let i = 0;
+
+    // console.log('log1');
     //
+    // setTimeout(() => console.log('asd'), 2000);
     //
-    // while (i < 5) {
-    //     run(i);
-    //     i++;
+    // console.log('log2');
     //
-    // }
+    // setTimeout(() => console.log('qwe'), 1000);
     //
-    // function run(i) {
-    //     setTimeout(() => {
-    //         console.log(i);
-    //     }, 1000);
+    // console.log('log3');
+
+
+    // let x = 0;
     //
-    // }
+    // setTimeout(() => {
+    //     x = 100500;
+    // }, 1000);
+    //
+    // console.log(x);
+
+
+    let i = 0;
+
+    while (i < 5) {
+        run(i);
+        i++;
+    }
+
+    //
+    function run(i) {
+        setTimeout(() => {
+            console.log(i);
+        }, 1000);
+    }
 
 </script>
 </body>
