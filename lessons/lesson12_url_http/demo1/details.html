@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<h1></h1>
+<p></p>
+
+<script>
+
+    let url = new URL(location.href);
+    let queryParamXXX = url.searchParams.get('xxx');
+    console.log(queryParamXXX);
+    let post = JSON.parse(queryParamXXX);
+    console.log(post);
+    let h1 = document.getElementsByTagName('h1')[0];
+    h1.innerText = post.title;
+
+    let p = document.getElementsByTagName('p')[0];
+    p.innerText = post.body;
+
+</script>
+</body>
+</html>

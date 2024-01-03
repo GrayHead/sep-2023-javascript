@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+
+    </title>
+</head>
+<body>
+
+
+<form>
+    <input type="text" name="title">
+    <input type="text" name="body">
+    <input type="number" name="userId">
+    <button>save</button>
+
+</form>
+
+<script>
+
+
+    // let url = new URL(location.href);
+    // console.log(url);
+    // let searchParams = url.searchParams;
+    // console.log(searchParams);
+    // searchParams.forEach(value => console.log(value));
+
+    // https://jsonplaceholder.typicode.com/todos?userId=5
+
+    // let baseUrl = 'https://jsonplaceholder.typicode.com/'
+    // let urlTodos = baseUrl + 'todos';
+    // let reuqeustTodosOfUserId5 = urlTodos + '?userId=5';
+
+    // let urlString = 'https://jsonplaceholder.typicode.com/todos'
+    // let urlObj = new URL(urlString);
+    // urlObj.searchParams.set('userId', 5);
+    // urlObj.searchParams.set('asdasda', 'asdhfashdfha');
+    // console.log(urlObj);
+    //
+    // fetch(urlObj).then(value => value.json()).then(value => console.log(value));
+
+    // fetch(
+    //     'https://jsonplaceholder.typicode.com/posts',
+    //     {
+    //         method: 'POST',
+    //         body: JSON.stringify({
+    //             title: 'some new title',
+    //             body: 'asa has klhk ahkjah sdkjah skdjh ',
+    //             userId: 123,
+    //         }),
+    //         headers: {'Content-type': 'application/json'}
+    //
+    //     }
+    // )
+    //     .then(response => response.json())
+    //     .then(value => console.log(value));
+
+
+    let form = document.forms[0];
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        let title = form.title.value;
+        let body = form.body.value;
+        let userId = form.userId.value;
+
+        fetch(
+            'https://jsonplaceholder.typicode.com/posts',
+            {
+                method: 'POST',
+                body: JSON.stringify(
+                    {title, body, userId}
+                ),
+                headers: {'Content-type': 'application/json'}
+
+            }
+        )
+            .then(response => response.json())
+            .then(value => console.log(value));
+
+
+    };
+
+
+</script>
+</body>
+</html>
