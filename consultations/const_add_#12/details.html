@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+
+</head>
+<body>
+<hr>
+<a href="index.html">TO HOME </a>
+<hr>
+<h2>DETAILS PAGE</h2>
+<hr>
+<script>
+    let url = new URL(location.href)
+    console.log(url);
+    let user = JSON.parse(url.searchParams.get('userID'))
+    console.log(user)
+
+    let ul = document.createElement('ul');
+    document.body.appendChild(ul)
+    for (const key in user) {
+        // console.log(userKey, user[userKey])
+        let li = document.createElement('li');
+        li.innerText = `${JSON.stringify(user[key])}`;
+        ul.appendChild(li);
+    }
+</script>
+</body>
+</html>

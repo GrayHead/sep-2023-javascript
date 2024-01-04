@@ -45,7 +45,7 @@ console.log(cars);
 
 let countEl = document.getElementById('count')
 let minus = document.getElementById('minus')
-let  plus = document.getElementById('plus')
+let plus = document.getElementById('plus')
 
 // let count = 0;
 // plus.addEventListener('click', () => {
@@ -57,16 +57,16 @@ let  plus = document.getElementById('plus')
 //     countEl.innerText = count
 // }
 
-let counter  = localStorage.getItem('counter') || 0;
+let counter = localStorage.getItem('counter') || 0;
 
-plus.addEventListener('click', ()=>{
+plus.addEventListener('click', () => {
     let count = JSON.parse(localStorage.getItem('counter'))
     count++;
     localStorage.setItem('counter', count)
     countEl.innerText = count;
 })
 
-minus.addEventListener('click', ()=>{
+minus.addEventListener('click', () => {
     let count = JSON.parse(localStorage.getItem('counter'))
     count--;
     localStorage.setItem('counter', count)
@@ -74,7 +74,7 @@ minus.addEventListener('click', ()=>{
 })
 
 let clear = document.getElementById('clear');
-clear.addEventListener('click', (e)=>{
+clear.addEventListener('click', (e) => {
     e.preventDefault();
     localStorage.clear();
     location.reload();
@@ -84,11 +84,11 @@ clear.addEventListener('click', (e)=>{
 let form = document.forms.form1;
 console.log(form);
 
-form.onsubmit = function (e){
+form.onsubmit = function (e) {
     e.preventDefault();
 
-   let username = e.target.xxx.value;
-   let password = e.target.password.value;
+    let username = e.target.xxx.value;
+    let password = e.target.password.value;
     console.log(username);
     console.log(password);
 
@@ -104,7 +104,7 @@ let carsBtn = document.getElementById('cars');
 console.log(carsBtn);
 
 let fav = JSON.parse(localStorage.getItem('fav')) || [];
-carsBtn.addEventListener('click', ()=>{
+carsBtn.addEventListener('click', () => {
     let carsDiv = document.createElement('div');
     document.body.appendChild(carsDiv)
     for (const car of cars) {
@@ -112,9 +112,9 @@ carsBtn.addEventListener('click', ()=>{
         let btn = document.createElement('button');
         btn.innerText = 'to fav';
 
-        btn.addEventListener('click', ()=>{
+        btn.addEventListener('click', () => {
             fav.push(car)
-         localStorage.setItem('fav', JSON.stringify(fav))
+            localStorage.setItem('fav', JSON.stringify(fav))
             btn.disabled = true;
         })
 
@@ -123,3 +123,8 @@ carsBtn.addEventListener('click', ()=>{
     }
     carsBtn.disabled = true;
 })
+
+const json = localStorage.getItem('sesions')
+
+const sessions = json ? JSON.parse(json) : [];
+

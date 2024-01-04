@@ -233,5 +233,8 @@ function createHr(color){
 // let result = res + res1;
 // console.log(result);
 
-
+let textAnyLi = (text,count) => {
+    document.write(`<ul> {for (let i = 0; i < ${count}; i++){<li>${text}</li>}</ul>`);
+}
+textAnyLi('myText_3',5);
 
