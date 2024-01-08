@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>map
+    </title>
+</head>
+<body>
+
+<script>
+
+    // let map = new Map();
+    // console.log(map);
+    //
+    // map.set('fullname', {value: 'def', writable: true, enumerable: true, configurable: true});
+    // map.set('age', {value: 0, writable: true, enumerable: true, configurable: true});
+    // map.set('age', {value: 0, writable: true, enumerable: true, configurable: false});
+    //
+    // console.log(map);
+    //
+    // // let options ={
+    // //     fullName :  {
+    // //         value: 'default value',
+    // //         writable: true,
+    // //         enumerable: true,
+    // //         configurable: true
+    // //     }
+    // // }
+    //
+    // // map.delete('age')
+    // console.log(map.get('age'));
+    // let from = Array.from(map.values());
+
+
+    let obj = {id: 1};
+    let arr = [11, 22, 33, 44, 44, 44, 55, 66, {}, {}, obj, obj]
+    let set = new Set(arr);
+    // set.add(11);
+    // set.add(22);
+    // set.add(33);
+    // set.add(22);
+    // set.add(44);
+    console.log(set);
+    set.has(11)
+    console.log(Array.from(set.keys()));
+    console.log(Array.from(set.values()));
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    function userFactory(id, name) {
+        let createdUser = {id, name};
+        return {
+            getId(pass) {
+                if (pass === '1234') {
+                    return createdUser.id;
+                }
+            },
+            getName(pass) {
+                if (pass === 'asd') {
+                    return createdUser.name
+                }
+            },
+            setId(id) {
+                if (id > 0) {
+                    createdUser.id = id;
+                }
+            },
+            setName(name) {
+                if (name) {
+                    createdUser.name = name
+                }
+            },
+        };
+    }
+
+    let xxx = userFactory(1, 'vasya');
+    console.log(xxx);
+    console.log(xxx.getId('1234'));
+    console.log(xxx.getName('asd'));
+
+    xxx.setId(100);
+    console.log(xxx.getId('1234'));
+
+
+</script>
+</body>
+</html>
